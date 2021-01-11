@@ -1,0 +1,32 @@
+<a [routerLink]="['/']">
+    <h1>My Store</h1>
+</a>
+
+<a [routerLink]="['/cart']" class="button fancy-button"><i class="material-icons">shopping_cart</i>Checkout</a>
+
+<button
+  *ngIf="user$ | async"
+  class="button fancy-button http-error"
+  (click)="causeHttpError()">
+  <i class="material-icons">error</i>
+  cause HttpErrorResponse
+</button>
+<button
+  class="button fancy-button"
+  (click)="causeErrorEvent()">
+  <i class="material-icons">error</i>
+  cause client 'ErrorEvent' error
+</button>
+<button
+  class="button fancy-button"
+  (click)="causePureError()">
+  <i class="material-icons">error</i>
+  cause pure client exception 'Error'
+</button>
+<a
+  class="button fancy-button"
+  (click)="logout()">
+  <i class="material-icons">account_circle</i>
+  Logout
+</a>
+

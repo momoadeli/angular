@@ -1,0 +1,29 @@
+<a [routerLink]="['/']">
+    <h1>My Store</h1>
+</a>
+
+<button [routerLink]="['/cart']" mat-raised-button class="top-bar-item"><i class="material-icons">shopping_cart</i>Checkout</button>
+
+<button
+  [disabled]="!(user$ | async)"
+  mat-raised-button
+  class="http-error top-bar-item"
+  (click)="causeHttpError()">
+  <i class="material-icons">error</i>
+  fake http error
+</button>
+<button
+  mat-raised-button
+  class="top-bar-item"
+  (click)="causePureError()">
+  <i class="material-icons">error</i>
+  fake general error
+</button>
+<button
+  mat-raised-button
+  class="top-bar-item"
+  (click)="logout()">
+  <i class="material-icons">account_circle</i>
+  Logout
+</button>
+

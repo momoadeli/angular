@@ -1,0 +1,29 @@
+<form [formGroup]="loginForm" (ngSubmit)="submit($event)" class="login-form">
+  <div>
+    <mat-form-field>
+      <!-- <mat-label>username</mat-label> -->
+      <input matInput placeholder="(username)" formControlName="uid">
+      <mat-hint>(uid = '{{loginFake.UID}}')</mat-hint>
+      <mat-error>(uid = '{{loginFake.UID}}')</mat-error>
+    </mat-form-field>
+  </div>
+
+  <div>
+    <mat-form-field>
+      <!-- <mat-label>password</mat-label> -->
+      <input matInput placeholder="(password)" formControlName="pwd">
+      <mat-hint>(password = '{{loginFake.PWD}}')</mat-hint>
+      <mat-error>(password = '{{loginFake.PWD}}')</mat-error>
+    </mat-form-field>
+  </div>
+
+  <div class="login-button">
+    <button
+      mat-stroked-button
+      color="primary"
+      [disabled]="loginForm.invalid"
+      (click)="submit($event)">
+      <i class="material-icons">account_circle</i>Login
+    </button>
+  </div>
+</form>

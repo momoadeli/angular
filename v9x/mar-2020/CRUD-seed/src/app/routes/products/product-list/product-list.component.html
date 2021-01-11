@@ -1,0 +1,10 @@
+<div class="products-container">
+  <h2>Products</h2>
+  <div *ngFor="let product of products$ | async">
+
+    <h3>
+        {{ product.id }}&nbsp;&nbsp;{{ product.name }}&nbsp;,&nbsp;{{product.date}}&nbsp;,&nbsp;{{product.hHMmSs}}
+    </h3>
+
+  </div>
+</div>
