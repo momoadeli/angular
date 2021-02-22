@@ -15,6 +15,8 @@ export class ValueAccessorExampleComponent implements OnInit {
   ngOnInit(): void {
     this.form = this.fb.group({
       itemName: new FormControl(),
+      isLocked: new FormControl({value: false, disabled: true}),
+      // isLocked: new FormControl({value: false, disabled: false})
     });
 
   }
