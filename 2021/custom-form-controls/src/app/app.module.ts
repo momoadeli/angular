@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { ComplexFormControlModule } from './complex-form-control/complex-form-control.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BridgePatternModule } from './bridge-pattern/bridge-pattern.module';
 
 @NgModule({
   declarations: [
@@ -11,8 +12,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     ComplexFormControlModule,
-    BrowserAnimationsModule
+    BridgePatternModule
   ],
   providers: [],
   bootstrap: [AppComponent]
