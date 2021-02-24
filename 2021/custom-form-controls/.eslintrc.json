@@ -1,0 +1,20 @@
+{
+  "extends": [
+    // "airbnb-typescript/base"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": "error",
+    "@typescript-eslint/typedef": [
+      "error",
+      {
+        "parameter": true,
+        "arrowParameter": true,
+        "variableDeclaration": true
+      }
+    ]
+  }
+}

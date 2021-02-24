@@ -1,20 +1,26 @@
 import { Component, OnInit } from '@angular/core';
+import { IWidget } from '../widget.interface';
+import { WIDGET_TOKEN } from '../widget.token';
 
 @Component({
   selector: 'app-weather-widget',
   templateUrl: './weather-widget.component.html',
-  styleUrls: ['./weather-widget.component.css']
+  styleUrls: ['./weather-widget.component.css'],
+  providers: [
+    {
+      provide: WIDGET_TOKEN,
+      useExisting: WeatherWidgetComponent,
+    },
+  ],
 })
-export class WeatherWidgetComponent implements OnInit {
-
+export class WeatherWidgetComponent implements OnInit, IWidget {
   isLoading = false;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  loadData(): void {
+  load(): void {
     console.log('load data from WEATHER API...');
   }
 
@@ -25,5 +31,4 @@ export class WeatherWidgetComponent implements OnInit {
       this.isLoading = false;
     }, 1000);
   }
-
 }
