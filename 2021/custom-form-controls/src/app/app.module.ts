@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { ComplexFormControlModule } from './complex-form-control/complex-form-control.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BridgePatternModule } from './bridge-pattern/bridge-pattern.module';
+import { AdvancedSearchControlModule } from './advanced-search-control/advanced-search-control.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { BridgePatternModule } from './bridge-pattern/bridge-pattern.module';
     BrowserModule,
     BrowserAnimationsModule,
     ComplexFormControlModule,
-    BridgePatternModule
+    BridgePatternModule,
+    AdvancedSearchControlModule
   ],
   providers: [],
   bootstrap: [AppComponent]

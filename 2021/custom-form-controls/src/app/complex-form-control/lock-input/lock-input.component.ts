@@ -13,11 +13,11 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 })
 export class LockInputComponent implements OnInit, ControlValueAccessor {
 
+  @Output() selected = new EventEmitter();
   value = false;
   disabled = false;
   onChange: (value: boolean) => void;
   onTouched: () => void;
-  @Output() selected = new EventEmitter();
 
   constructor() { }
   writeValue(obj: boolean): void {
