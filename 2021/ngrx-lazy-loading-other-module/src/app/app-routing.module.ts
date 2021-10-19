@@ -8,7 +8,12 @@ const routes: Routes = [
   { path: 'home', component: RootComponent },
   {
     path: 'lazy',
-    loadChildren: './lazy-loaded/lazy-loaded.module#LazyLoadedModule'
+    // loadChildren: './lazy-loaded/lazy-loaded.module#LazyLoadedModule'
+    loadChildren: () => import('./lazy-loaded/lazy-loaded.module').then(
+      m => {
+        return m.LazyLoadedModule;
+      }
+    )
   }
 ];
 

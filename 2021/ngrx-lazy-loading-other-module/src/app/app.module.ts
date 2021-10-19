@@ -14,7 +14,7 @@ import { StoreModule } from '@ngrx/store';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({}, {})
+    // StoreModule.forRoot({}, {})
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,3 +4,4 @@ import { getMyCounter, featureSelector } from './selectors';
 
 const fromLazyStore = { inc, dec, lazyReducer, featureSelector, getMyCounter };
 export { fromLazyStore };
+// export { inc, dec, lazyReducer, featureSelector, getMyCounter };
