@@ -1,0 +1,4 @@
+<small>{{ value? "click to unlock": "click to lock"}}</small>
+<mat-icon [ngClass]="{ 'disabled-control': disabled}" aria-hidden="false " aria-label="Example home icon " (click)="setValue() ">
+    {{ value ? "lock ": "lock_open "}}
+</mat-icon>
